@@ -1,0 +1,20 @@
+<div>
+  <div class = "filter-container">
+    <div *ngFor="let type of filterTypes" class = "filter">
+      <input type = "radio" name="radio-select" (change)="filter(type)"> {{type}}
+    </div>
+  </div>
+  <div class = "posts-container">
+    <span *ngFor="let post of posts" [routerLink]="['/detail', post.id]"
+      (mouseover)="onHover(post)" (mouseout)="onOut()">
+      <li class = "post-title-bar">
+        <span class="post-title">{{post.title}}</span>
+        <span class="post-price">${{post.price}}</span>
+        <div class="post-body" *ngIf="this.selectedPost === post">
+          <span class="tab"></span>
+          {{post.body}}
+        </div>
+      </li>
+    </span>
+  </div>
+</div>

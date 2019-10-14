@@ -1,0 +1,15 @@
+<div>
+  <button style="position:relative;vertical-align:top;">Back</button>
+  <div *ngIf="post" class = "post-detail">
+    <span class="post-title">{{post.title}}</span>
+    <div class="post-price">${{post.price}}</div>
+    <br><br><br><br>
+    <div class ="post-body">
+      {{post.body}}
+    </div>
+    <div style="position:relative; vertical-align:bottom; float:right;">
+      <button>Buy Now</button>
+      <button>Add to Cart</button>
+    </div>
+  </div>
+</div>
