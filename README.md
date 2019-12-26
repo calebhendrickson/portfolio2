@@ -1,2 +1,2 @@
-# portfolio2
-E-commerce webpage created with Angular, HTML, and lite-server
+# portfolio3
+E-commerce webpage created with React
